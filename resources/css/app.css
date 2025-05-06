@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+
 html,
 body {
   height: 100%;
@@ -13,4 +14,32 @@ body {
   color: transparent;
   -webkit-text-stroke: 1px white;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-shadow-3d {
+    text-shadow:
+      1px 1px 0 #fff,
+      2px 2px 0 #fff,
+      3px 3px 0 #fff,
+      4px 4px 0 #fff;
+  }
+
+  @keyframes pulse-text {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  .hover-animate-text:hover {
+    animation: pulse-text 0.5s ease-in-out;
+  }
+}
+
 
