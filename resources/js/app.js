@@ -38,3 +38,28 @@ const fadeElements = document.querySelectorAll('.fade-in');
 
   fadeElements.forEach(el => observer.observe(el));
 
+  //Menu
+
+  const toggleButton = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeButton = document.getElementById('mobile-menu-close');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  function closeMenu() {
+    mobileMenu.classList.add('-translate-y-full');
+    mobileMenu.classList.remove('translate-y-0');
+  }
+
+  toggleButton.addEventListener('click', () => {
+    mobileMenu.classList.remove('-translate-y-full');
+    mobileMenu.classList.add('translate-y-0');
+  });
+
+  closeButton.addEventListener('click', closeMenu);
+
+  // Fermer le menu quand on clique sur un lien
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });

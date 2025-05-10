@@ -26,4 +26,10 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-
+/*
+@media screen and (min-width: 1024px) {
+  h2.card {
+    font-size:  4rem !important;
+  }
+}
+*/
