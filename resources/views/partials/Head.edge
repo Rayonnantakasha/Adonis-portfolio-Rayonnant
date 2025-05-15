@@ -1,0 +1,87 @@
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayonnant-Nyonsa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/resources/css/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+   
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-slate': '#2D383C',
+                        'darker-slate': '#38464B',
+                        'accent': '#ff5940',
+                        'light-accent': '#ff8a76',
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                        'display': ['Montserrat', 'sans-serif'],
+                        'cursive': ['Pacifico', 'cursive'],
+                        'cookie': ['Cookie', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #2D383C;
+        }
+        
+        .brick-effect {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .brick-effect::before {
+            content: "";
+            position: absolute;
+            width: 120%;
+            height: 110%;
+            background: repeating-linear-gradient(
+                to right,
+                #ff5940,
+                #ff5940 30px,
+                transparent 30px,
+                transparent 35px
+            ),
+            repeating-linear-gradient(
+                to bottom,
+                #ff5940,
+                #ff5940 30px,
+                transparent 30px,
+                transparent 35px
+            );
+            z-index: -1;
+            right: -25px;
+            top: -15px;
+        }
+        
+        .input-field {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #4a5568;
+            background-color: transparent;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-bottom-color: #ff5940;
+        }
+        
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+    </style>
