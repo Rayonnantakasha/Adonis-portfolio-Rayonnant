@@ -65,7 +65,30 @@ const fadeElements = document.querySelectorAll('.fade-in');
   });
 
   //Gestion du formulaire
-  const form = document.getElementById('contact-form')
+  const form = document.getElementById('contact-form');
+  const notification = document.getElementById('notification');
+  const notificationText = document.getElementById('notification-text');
+  const notificationIcon = document.getElementById('notification-icon');
+
+  function showNotification(type, message) {
+    const isSuccess = type === 'success';
+
+    // Texte et icône
+    notificationText.textContent = message;
+    notificationIcon.textContent = isSuccess ? '✅' : '❌';
+
+    // Couleur selon le type
+    notification.classList.remove('bg-red-600', 'bg-green-600');
+    notification.classList.add(isSuccess ? 'bg-green-600' : 'bg-red-600');
+
+    // Affichage
+    notification.classList.remove('hidden');
+
+    // Disparition automatique après 3 secondes
+    setTimeout(() => {
+      notification.classList.add('hidden');
+    }, 3000);
+  }
   form.addEventListener('submit', async (e) => {
     e.preventDefault()
 
@@ -84,9 +107,9 @@ const fadeElements = document.querySelectorAll('.fade-in');
     
     // Vérifie si la réponse est OK
     if (response.ok) {
-      alert('Message envoyé !')
+      showNotification('success', 'Message envoyé avec succès !')
       form.reset()
     } else {
-      alert('Erreur lors de l’envoi')
+     showNotification('error', "Erreur lors de l'envoi du message.")
     }
   })
