@@ -63,3 +63,30 @@ const fadeElements = document.querySelectorAll('.fade-in');
       closeMenu();
     });
   });
+
+  //Gestion du formulaire
+  const form = document.getElementById('contact-form')
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault()
+
+    const formData = new FormData(form) // Récupère les données du formulaire
+    // Convertit FormData en objet JSON
+    const data = Object.fromEntries(formData.entries())
+
+    // Envoie les données à Formspree
+    const response = await fetch('https://formspree.io/f/xyzjrzdr', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    
+    // Vérifie si la réponse est OK
+    if (response.ok) {
+      alert('Message envoyé !')
+      form.reset()
+    } else {
+      alert('Erreur lors de l’envoi')
+    }
+  })
