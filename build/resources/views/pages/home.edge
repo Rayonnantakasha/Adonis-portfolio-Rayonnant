@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    @include('partials/Head')
+  </head>
+<body class="text-white scroll-smooth">
+  <!--header-->
+  <header class="fixed top-0 left-0 w-full z-10 bg-dark-slate flex items-center justify-between lg:px-32 px-2 py-2" id="header">
+    @include('partials/header')
+  </header>
+   
+  <!--main-->
+  <main class="lg:px-32 px-2">
+    
+    <!--Hero section-->
+    <section id="accueil">
+      @include('partials/hero')
+    </section>
+    <!--End Hero section-->
+
+      <div class="lg:pt-32 lg:pb-40 pt-24 pb-32">
+      </div>
+
+    <!--About section-->
+    <section class="" id="a-propos">
+      @include('partials/about')
+    </section>
+    <!--End of About section-->
+    <div class="lg:pt-32 lg:pb-40 pt-24 pb-32">
+    </div>
+
+    <!-- skills section-->
+    <section class="" id="competences">
+      @include('partials/skills')
+    </section>
+    <!--End skills section-->
+    <div class="lg:pt-32 lg:pb-40 pt-24 pb-32">
+    </div>
+
+    <!--Technologie section-->
+    <section>
+      @include('partials/technologie')
+    </section>
+    <!--End Technologie section-->
+    <div class="lg:pt-32 lg:pb-40 pt-24 pb-32">
+    </div>
+
+    <!--artwork section-->
+    <section class="">
+     <div class="text-center fade-in">
+       <h2 class="lg:text-9xl text-6xl font-cookie font-black text-outline-white">
+         Envie de <br>découvrir mes <br> œuvres ?  
+       </h2>
+       <div class="pt-8">
+          <a href="/projets" class="bg-accent p-4 hover:bg-orange-800 transition duration-300 ease-in-out">
+            <span class="font-bold">CLIQUEZ ICI</span>
+         </a>
+       </div>
+     </div>
+    </section>
+    <!--End artwork section-->
+    <div class="lg:pt-32 lg:pb-40 pt-24 pb-32">
+    </div>
+    
+    <!-- form section-->
+    <section class="py-16" id="form">
+      @include('partials/formulaire')
+    </section>
+     <!--End form section-->
+
+   <div class="lg:pt-32 lg:pb-40 pt-24 pb-32">
+   </div>
+
+    <!--contact and socials network section-->
+      <section class="text-center">
+         @include('partials/contact')
+      </section>
+      
+    <div class="lg:pt-32 lg:pb-40 pt-24 pb-32">
+    </div>
+  </main>
+
+  <!--footer-->
+  <footer>
+    @include('partials/footer')
+  </footer>
+   <!-- Scroll to top button -->
+   <button class="scroll-top hidden bg-transparent border p-4 hover:border-accent transition duration-300 ease-in-out text-white"
+        data-target="#top">
+  <i class="fas fa-arrow-up hover:text-accent transition duration-300 ease-in-out"></i>
+</button>
+<div
+  id="notification"
+  class="hidden fixed top-5 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-md shadow-md text-sm flex items-center space-x-2 z-50 transition-all duration-500"
+>
+ <span id="notification-icon">✅</span>
+  <span id="notification-text">Message envoyé avec succès !</span>
+ <script src="/resources/js/app.js"></script>
+</body>
+</html>

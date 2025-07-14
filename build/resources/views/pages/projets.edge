@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @include('partials/Head')
+</head>
+<body class="text-white scroll-smooth">
+    <header class="fixed top-0 left-0 w-full z-10 bg-dark-slate flex items-center justify-between lg:px-32 px-2 py-2" id="header">
+        @include('partials/header')
+    </header>
+
+     <div class="lg:pt-32 lg:pb-40 pt-24 pb-32">
+     </div>
+    <main class="lg:px-32 px-2 md:px-8">
+       <section class="px-2">
+        <div class="flex flex-col items-center">
+           <h2 class="lg:text-5xl text-3xl text-center font-bold lg:w-[45%] pb-12">
+               Réalisation d’un clone de Twitter
+           </h2>
+            <div class="bg-darker-slate lg:text-start lg:w-[60%] fade-in lg:p-6 p-6 shadow-xl backdrop-opacity-60">
+              <p class="text-center text-md lg:text-xl pb-4">Dans le cadre de mon projet chef-d'œuvre de fin d’étude, 
+                 j’ai conçu et développé un clone de Twitter (actuellement appelé X) en utilisant le framework JavaScript <span class="text-accent">AdonisJS</span>.
+              </p>
+              <p class="text-center text-md lg:text-xl pb-4">Le site intègre les principales fonctionnalités de la plateforme originale, notamment : La création de compte et l’authentification sécurisée, La publication de tweets, avec ou sans image,
+                 La possibilité de liker et commenter les publications, La modification du profil utilisateur et de la biographie.
+              </p>
+              <p class="text-center text-md lg:text-xl">Bien que le projet soit encore en cours de développement, 
+                 la majorité des fonctionnalités essentielles sont déjà opérationnelles. 
+              </p>
+            <div class="pt-8  flex justify-center">
+             <a href="http://tweeter-clone-with-adonis-js-ray-production.up.railway.app" target="_blank"  class="bg-accent align-center p-4 hover:bg-orange-800 transition duration-300 ease-in-out">
+                 <span class="font-bold">VOIR LE SITE</span>
+             </a>
+           </div>
+           </div>
+           
+        </div>
+
+       </section>
+     <div class="lg:pt-32 lg:pb-40 pt-24 pb-32">
+     </div>
+
+     <section>
+               <div class="flex flex-col items-center">
+           <h2 class="lg:text-5xl text-3xl text-center font-bold lg:w-[55%] pb-12">
+               Conception de la boutique en ligne Fashion 
+           </h2>
+            <div class="bg-darker-slate lg:text-start lg:w-[60%] fade-in lg:p-6 p-6 shadow-xl backdrop-opacity-60">
+              <p class="text-center text-md lg:text-xl pb-4">Le but de ce projet était la prise en main du CMS <span class="text-accent">WordPress</span> en concevant une boutique en ligne.
+              </p>
+              <p class="text-center text-md lg:text-xl pb-4">Le site intègre les principales fonctionnalités d'une boutique en ligne, notamment : Un thème installé,
+               Les configurations de base faite, Les pages (Accueil, À propos, Nos actualités, Contact). Un menu de navigation fonctionnel. Le logo de Fashion sur l'entête, Les extensions standard installé et enfin
+               L'icône de de la boutique Fashion sur les onglets de navigation sur les pages qui affichent le site
+              </p>
+              <p class="text-center text-md lg:text-xl">Bien que le projet soit encore en cours de développement, 
+                 la majorité des fonctionnalités essentielles sont déjà opérationnelles. 
+              </p>
+            <div class="pt-8  flex justify-center">
+             <a href="https://dev-fashion-akasha.pantheonsite.io/" target="_blank"  class="bg-accent align-center p-4 hover:bg-orange-800 transition duration-300 ease-in-out">
+                 <span class="font-bold">VOIR LE SITE</span>
+             </a>
+           </div>
+           </div>
+           
+        </div>
+     </section>
+     <div class="lg:pt-32 lg:pb-40 pt-24 pb-32">
+     </div>
+      <section class="text-center">
+         @include('partials/contact')
+      </section>
+    </main>
+
+    <div class="lg:pt-32 lg:pb-40 pt-24 pb-32">
+    </div>
+      <!--footer-->
+  <footer>
+    @include('partials/footer')
+  </footer>
+   <!-- Scroll to top button -->
+   <button class="scroll-top hidden bg-transparent border p-4 hover:border-accent transition duration-300 ease-in-out text-white"
+        data-target="#top">
+      <i class="fas fa-arrow-up hover:text-accent transition duration-300 ease-in-out"></i>
+   </button>
+ <script src="/resources/js/app.js"></script> 
+</body>
+</html>

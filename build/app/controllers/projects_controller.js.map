@@ -1,0 +1,1 @@
+{"version":3,"file":"projects_controller.js","sourceRoot":"","sources":["../../../app/controllers/projects_controller.ts"],"names":[],"mappings":"AAGA,MAAM,CAAC,OAAO,OAAO,kBAAkB;IAC9B,KAAK,CAAC,OAAO,CAAC,EAAE,IAAI,EAAe;QACxC,OAAO,IAAI,CAAC,MAAM,CAAC,eAAe,CAAC,CAAA;IACrC,CAAC;CACF"}

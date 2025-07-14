@@ -1,0 +1,42 @@
+<div>
+    <a href="{{route('/')}}">
+      <img src="/resources/images/Logo_dev.svg" alt="mon logo" class="lg:w-52 w-36">
+    </a>
+  </div>
+  
+  <!-- Menu principal -->
+  <nav class="hidden sm:flex justify-between gap-4 items-center">
+    <a href="{{route('/')}}" class="hover:text-accent transition duration-300 ease-in-out">Accueil</a>
+    <a href="#a-propos" class="hover:text-accent transition duration-300 ease-in-out">À propos</a>
+    <a href="{{route('/projets')}}" class="hover:text-accent transition duration-300 ease-in-out">Mes projets</a>
+  </nav>
+  
+  <!-- Menu hamburger (mobile only) -->
+  <div class="sm:hidden">
+    <button id="mobile-menu-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+        <path d="M4 5h16M4 12h16M4 19h16" stroke="white" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Menu mobile -->
+  <nav id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-dark-slate text-white flex flex-col items-center justify-center gap-8 transform -translate-y-full transition-transform duration-500 ease-in-out z-10 sm:hidden">
+       <!-- Bouton de fermeture -->
+     <button id="mobile-menu-close" class="absolute top-4 right-4 text-white hover:text-accent transition">
+       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+       <path stroke-linecap="round" stroke-width="4" d="M6 18L18 6M6 6l12 12" />
+       </svg>
+     </button>
+    <a href="#accueil" class="text-2xl hover:text-accent transition duration-300 ease-in-out mobile-link">Accueil</a>
+    <a href="#competences" class="text-2xl hover:text-accent transition duration-300 ease-in-out mobile-link">Compétences</a>
+    <a href="#a-propos" class="text-2xl hover:text-accent transition duration-300 ease-in-out mobile-link">À propos</a>
+    <a href="/document/CV_Rayonnant_Nyonsa.pdf" target="_blank" rel="noopener" rel="noopener" class="text-accent pt-2 text-2xl font-bold flex items-center hover:text-white transition duration-300 ease-in-out">
+      MON CV
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" 
+        role="img" class="iconify iconify--iconoir" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" 
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+        d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2M7 7h10M7 12h10M7 17h6" class="mb-px"></path>
+      </svg>
+    </a>
+  </nav>
